@@ -10,8 +10,8 @@ For instance, at a basic level, you might want to know whether a system you need
 
 More importantly, you might want to know all the services or entities that the systems you use use as data processors and/or controllers
 
-## Basic
+## A human-machine language for describing systems and their services
 
-This 
+This vocabulary makes it possible for information about systems to be easily declared, read, modified, and shared by people and by machines. 
 
 
