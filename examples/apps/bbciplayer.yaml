@@ -1,11 +1,12 @@
 name: bbciplayer-android
+type: app
 datasrc: https://reports.exodus-privacy.eu.org/en/reports/bbc.iplayer.android/latest/
 platform: android
 version: 4.163.0.27203
 origin: Google Play
 trackers:
-  - ./libs/appsflyer-android.yaml
-  - atinternet-android
-  - msvstudio-crashes-android
-  - optimizely-android
-  - urbanairship-android
+  - libs/appsflyer-android
+  - libs/atinternet-android
+  - libs/msvstudio-crashes-android
+  - libs/optimizely-android
+  - libs/urbanairship-android
