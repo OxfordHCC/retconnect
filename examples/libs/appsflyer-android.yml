@@ -1,0 +1,4 @@
+name: appsflyer-android
+super: ./appsflyer.yaml
+type: analytics
+exodus: https://reports.exodus-privacy.eu.org/en/trackers/12/
