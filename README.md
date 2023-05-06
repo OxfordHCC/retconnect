@@ -16,7 +16,31 @@ One such modelling langauge is [SysML](https://sysml.org/sysml-partners/), which
 
 This vocabulary makes it possible for information about systems to be easily declared, read, modified, and shared by people and by machines. 
 
-```yaml
+In the following example, we have a specification for a smart tv that both has dependencies at the OS/system level and also supports installation of apps which, each, in turn, have their own dependencies.  Note that this description is specific to the OS version and model. 
 
+```yaml
+devicename: Acme-SmartTV-2000-42
+manufacturer: Acme
+name: SmartTV 2000-42
+model: SM652000-42-2022
+osversion: 1.0.22
+dependencies:
+  - libs/optimizely-android
+  - libs/samsung-voice-recognition-saas-android
+  - libs/nielsen-ratings-android
+  - libs/appsflyer-android
+software:
+  - apps/bbciplayer-android
+  - apps/netflix-android
+  - apps/4od-android
+  - apps/itv-android
+disclosures:
+  - destination: 
+    - name: acme-usage
+    - datatype: viewing stats, programmes
 ```
+
+Each library, app, or service, in turn, can list its dependencies and has essential information about the jurisdictions and types of shared.
+
+
 

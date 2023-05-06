@@ -5,10 +5,15 @@ model: SM652000-42-2022
 osversion: 1.0.22
 dependencies:
   - libs/optimizely-android
-  - libs/samsung-voice-recognition-saas
+  - libs/samsung-voice-recognition-saas-android
+  - libs/nielsen-ratings-android
   - libs/appsflyer-android
 software:
   - apps/bbciplayer-android
   - apps/netflix-android
   - apps/4od-android
   - apps/itv-android
+disclosures:
+  - destination: 
+    - name: acme-usage
+    - datatype: viewing stats, programmes
