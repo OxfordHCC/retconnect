@@ -1,5 +1,6 @@
 name: appsflyer-android
-super: appsflyer.yaml
-type: analytics
-exodus: https://reports.exodus-privacy.eu.org/en/trackers/12/
-
+super: appsflyer-analytics
+platform: android
+code_identifier: com.appsflyer
+version: 1.0.xx
+exodus_info: https://reports.exodus-privacy.eu.org/en/trackers/12/

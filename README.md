@@ -19,9 +19,11 @@ This vocabulary makes it possible for information about systems to be easily dec
 In the following example, we have a specification for a smart tv that both has dependencies at the OS/system level and also supports installation of apps which, each, in turn, have their own dependencies.  Note that this description is specific to the OS version and model. 
 
 ```yaml
-devicename: Acme-SmartTV-2000-42
+name: Acme-SmartTV-2000-42
+type: device
+subtype: smarttv
+networkname: SmartTV 2000-42
 manufacturer: Acme
-name: SmartTV 2000-42
 model: SM652000-42-2022
 osversion: 1.0.22
 dependencies:
@@ -40,7 +42,43 @@ disclosures:
     - datatype: viewing stats, programmes
 ```
 
-Each library, app, or service, in turn, can list its dependencies and has essential information about the jurisdictions and types of shared.
+Let's go through this example step by step.
 
+The first three keys identify the particular device. "name" is a global identifier (we could have called it `id`).  These keys help to uniquely distinguish records for slightly different variants of devices (versions, OSes) etc, since different versions could have characteristics worth noting.
 
+The `dependencies` key contains a list of external (1st and 3rd party) dependencies that the TV itself depends on. This could include essential services (such as providing software updates), or optional/unnecessary services such as marketing.
+
+The `software` key represents apps installed either by the manufacturer or the user. Here we differentiate these dependencies because they are not considered essential to the base system functionality.
+
+Each library, app, or service, in turn, can list its dependencies and has essential information about the jurisdictions and types of shared. It's shown in a separate file. For instnace, if we look at `appsflyer-android` under the `libs` directory:
+
+```yaml
+name: appsflyer-android
+type: lib
+libtype: [analytics, advertising]
+org: appsflyer.com
+platform: android
+code_identifier: com.appsflyer
+version: 1.0.xx
+exodus_info: https://reports.exodus-privacy.eu.org/en/trackers/12/
+```
+
+Notice the org tag here; this means that there should be another page containing information about the company.
+
+```yaml
+name: appsflyer.com
+type: company
+companyurl: https://www.appsflyer.com/
+nationality: US
+description: AppsFlyer is a SaaS mobile marketing analytics and attribution platform, headquartered in San Francisco, California
+moreinfo:
+  - wikipedia:
+    - url: https://en.wikipedia.org/wiki/AppsFlyer
+    - type: wikipeida
+  - itwire-1-april-2022:
+    - url: https://itwire.com/business-it-news/security/$72-million-lost-in-mobile-app-ad-fraud-appsflyer.html
+    - type: news
+```
+
+## But why?
 

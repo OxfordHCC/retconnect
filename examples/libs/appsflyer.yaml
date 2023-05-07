@@ -1,4 +1,12 @@
-name: appsflyer
-type: analytics
+name: appsflyer.com
+type: company
 companyurl: https://www.appsflyer.com/
-
+nationality: US
+description: AppsFlyer is a SaaS mobile marketing analytics and attribution platform, headquartered in San Francisco, California
+moreinfo:
+  - wikipedia:
+    - url: https://en.wikipedia.org/wiki/AppsFlyer
+    - type: wikipeida
+  - itwire-1-april-2022:
+    - url: https://itwire.com/business-it-news/security/$72-million-lost-in-mobile-app-ad-fraud-appsflyer.html
+    - type: news
