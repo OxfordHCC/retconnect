@@ -12,7 +12,9 @@ There are many kinds of system modelling languages used by various stakeholders 
 
 One such modelling langauge is [SysML](https://sysml.org/sysml-partners/), which is a profile of UML (Unified Modelling Language) and is used by many large, complex systems integrators.  However, being general purpose it is very verbose and not very easy for people to read, write, and edit. Thus, while inspired by it, we decided to create a new lightweight language which could, in theory, be easily converted to SysML or other system moelling langauges, but better suits its intended purpose.
 
-Closely related to RETCONnect are [Software Bill of Materials](https://www.cisa.gov/sbom) which is an initiative to get manufacturers to provide a list of all the components of a software product, including the names of the suppliers and versions of the components. The intended purpose of SBOMs is to track the software components used in a product, for the purpose of identifying potential security risks. 
+### Software Bills of Materials (SBOMs)
+
+Closely related to RETCONnect are [Software Bill of Materials](https://www.cisa.gov/sbom) which is an initiative led by the US Government's [Cybersecurity & Infrastructure Security Agency (CISA)](https://cisa.gov) to get manufacturers to provide a list of all the components of a software product, including the names of the suppliers and versions of the components. The intended purpose of SBOMs is to track the software components used in a product, for the purpose of identifying potential security risks. 
 
 SBOMs have been proposed as a way to: 
 - Identify potential security risks in a product.
@@ -20,6 +22,8 @@ SBOMs have been proposed as a way to:
 - Comply with regulations that require disclosure of software components.
 - Improve the security of software products.
 - To inform customers, suppliers, and other stakeholders of such dependencies.
+
+### How does RETConnect relate to SBOMs?
 
 ## Examples
 
