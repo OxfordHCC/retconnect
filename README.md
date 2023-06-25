@@ -16,7 +16,8 @@ One such modelling langauge is [SysML](https://sysml.org/sysml-partners/), which
 
 Closely related to RETCONnect are [Software Bill of Materials](https://www.cisa.gov/sbom) which is an initiative led by the US Government's [Cybersecurity & Infrastructure Security Agency (CISA)](https://cisa.gov) to get manufacturers to provide a list of all the components of a software product, including the names of the suppliers and versions of the components. The intended purpose of SBOMs is to track the software components used in a product, for the purpose of identifying potential security risks. 
 
-SBOMs have been proposed as a way to: 
+SBOMs have been proposed to support many different aspects of software quality and cybersecurity–for example:
+
 - Risk management: SBOMs can be used to identify and assess the risks associated with using open source software. This can help organizations to mitigate the risks of supply chain attacks, intellectual property theft, and compliance violations.
 - Compliance: SBOMs can be used to comply with regulations such as the Cybersecurity and Infrastructure Security Agency (CISA)'s Software Supply Chain Risk Management (SCRM) requirements.
 - Security: SBOMs can be used to improve the security of software by identifying known vulnerabilities and providing information on how to patch them.
@@ -27,11 +28,15 @@ The use of Software Bills of Materials (SBOMs) is projected to increase; Forrest
 
 Despite their potential, adoption of SBOMs present significant hurdles.  One of the biggest  is collecting and managing the data needed to create an SBOM. This data can come from a variety of sources, including software vendors, open source projects, and internal systems. It can be difficult to identify all of the components that make up a software system, and it can be even more difficult to track changes to those components over time.
 
-Another challenge is in finding the right representations for all of the purposes SBOMs have been purported to serve, and a lack of standard SBOM representations, libraries, and tooling for supporting the reading and writing of SBOMs. Without such standardisation, it is likely that different vendors will produce SBOMs that represent wildly different information at different levels of detail that may greatly hinder their usefulness.
+Another challenge is in finding the right representations for SBOMS in order for them to successfully serve all of the purposes envisioned. Thus far, there has been a lack of standardisation of SBOM representations, libraries, and tooling for supporting the reading and writing of SBOMs. Without such standardisation, it is likely that different vendors will produce SBOMs that represent wildly different information at different levels of detail that may greatly hinder their usefulness.
 
 Finally, there a lack of end-user applciations that use SBOMs means that the perceived benefits are seen as hpypothetical, which means that the real tangible cost of creating SBOMs cannot be immediatley compared to the benefits they afford. 
 
 ### How does RETConnect relate to SBOMs?
+
+RETCONnect was invented independently from CISA and others' SBON efforts, and grew out of the PETRAS X-Ray projects at the University of Oxford. The X-Ray projects aimed to empower end-user individuals to understand the hidden data infrastructures that run behind the scenes of the digital apps and services they use on the daily basis.  First in the series was App X-Ray, the first large-scale effort to map the Android app data ecosystem--using static code analysis.  This subsequently rendered obsolete by other similar projects like [Exodus](https://exodus-privacy.eu.org/en/). Other follow-up X-Ray projects include [X-Ray Refine](https://dl.acm.org/doi/10.1145/3173574.3173967), [TrackerControl](https://trackercontrol.org/), and, finally, [IoT Refine](https://dl.acm.org/doi/10.1145/3313831.3376264) for smart homes.  IoT Refine used network traffic analysis only to try to infer what data processors home IoT devices used, including identifying potential 3rd-party service libraries.
+
+One problem with these projects was that while analyses these 
 
 ## Examples
 
