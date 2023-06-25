@@ -36,9 +36,9 @@ Finally, there a lack of end-user applciations that use SBOMs means that the per
 
 RETCONnect was invented independently from CISA and others' SBON efforts, and grew out of the PETRAS X-Ray projects at the University of Oxford. The X-Ray projects aimed to empower end-user individuals to understand the hidden data infrastructures that run behind the scenes of the digital apps and services they use on the daily basis.  First in the series was App X-Ray, the first large-scale effort to map the Android app data ecosystem--using static code analysis.  This subsequently rendered obsolete by other similar projects like [Exodus](https://exodus-privacy.eu.org/en/). Other follow-up X-Ray projects include [X-Ray Refine](https://dl.acm.org/doi/10.1145/3173574.3173967), [TrackerControl](https://trackercontrol.org/), and, finally, [IoT Refine](https://dl.acm.org/doi/10.1145/3313831.3376264) for smart homes.  IoT Refine used network traffic analysis only to try to infer what data processors home IoT devices used, including identifying potential 3rd-party service libraries.
 
-One problem with these projects was that while analyses these 
+One problem with these projects was that while these analyses were used to create UIs that helped people understand the services behind their devices and apps, this knowledge could not further propagated downstream for other purposes.  It is in this that we created RETCONnect – a simple machine- and human-readable software bill of materials and device/service descriptor that provides not only descriptions for devices themselves but for the constituent libraries and companies behind them.
 
-## Examples
+## RETCOnnect Examples
 
 This vocabulary makes it possible for information about systems to be easily declared, read, modified, and shared by people and by machines. 
 
