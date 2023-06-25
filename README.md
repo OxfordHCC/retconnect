@@ -12,6 +12,15 @@ There are many kinds of system modelling languages used by various stakeholders 
 
 One such modelling langauge is [SysML](https://sysml.org/sysml-partners/), which is a profile of UML (Unified Modelling Language) and is used by many large, complex systems integrators.  However, being general purpose it is very verbose and not very easy for people to read, write, and edit. Thus, while inspired by it, we decided to create a new lightweight language which could, in theory, be easily converted to SysML or other system moelling langauges, but better suits its intended purpose.
 
+Closely related to RETCONnect are [Software Bill of Materials][https://www.cisa.gov/sbom] which is an initiative to get manufacturers to provide a list of all the components of a software product, including the names of the suppliers and versions of the components. The intended purpose of SBOMs is to track the software components used in a product, for the purpose of identifying potential security risks. 
+
+SBOMs have been proposed as a way to: 
+- Identify potential security risks in a product.
+- Track the provenance of software components.
+- Comply with regulations that require disclosure of software components.
+- Improve the security of software products.
+- To inform customers, suppliers, and other stakeholders of such dependencies.
+
 ## Examples
 
 This vocabulary makes it possible for information about systems to be easily declared, read, modified, and shared by people and by machines. 
@@ -46,7 +55,7 @@ Let's go through this example step by step.
 
 The first three keys identify the particular device. "name" is a global identifier (we could have called it `id`).  These keys help to uniquely distinguish records for slightly different variants of devices (versions, OSes) etc, since different versions could have characteristics worth noting.
 
-The `dependencies` key contains a list of external (1st and 3rd party) dependencies that the TV itself depends on. This could include essential services (such as providing software updates), or optional/unnecessary services such as marketing.
+The `dependencies` key contains a list of 1st and 3rd party dependencies that the core TV OS itself depends on. This dependencies could provide functionality key to essential services (such as providing software updates), or optional/unnecessary services such as marketing.
 
 The `software` key represents apps installed either by the manufacturer or the user. Here we differentiate these dependencies because they are not considered essential to the base system functionality.
 
@@ -82,3 +91,4 @@ moreinfo:
 
 ## But why?
 
+There are several applications of 
