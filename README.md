@@ -106,6 +106,30 @@ moreinfo:
     - type: news
 ```
 
-## But why?
+In this example, there are articles that have been crowdsourced by individuals who think that these articles can provide vital background information about the companies. Ideally this list would contain links to important information, including histories of data breaches, information on data protectiona audits and other vital information that can relate to its trustworthiness.
 
-There are several applications of 
+## Specification
+
+Instead of creating a fixed specification, RETCONnect is designed to evolve, with the vocabulary itself defined in files that can be updated and versioned.  We take inspiration from XML namespaces to do this.
+
+```yaml
+_vid: vocabs/retconnect-apps-v1 # this sets the vocabulary, can be a URL
+name: languagewizard.com
+type: app
+### .. rest of the file here 
+```
+
+The specifications itself look like this:
+
+```yaml
+name: retconnect-apps-v1
+fields:
+  - name: 
+    - type: string
+    - description: The App 
+
+```
+
+## Possible Applications
+
+There 
