@@ -45,10 +45,10 @@ This vocabulary makes it possible for information about systems to be easily dec
 In the following example, we have a specification for a smart tv that both has dependencies at the OS/system level and also supports installation of apps which, each, in turn, have their own dependencies.  Note that this description is specific to the OS version and model. 
 
 ```yaml
-name: Acme-SmartTV-2000-42
+id: Acme-SmartTV-2000-42
 type: device
 subtype: smarttv
-networkname: SmartTV 2000-42
+networkid: SmartTV 2000-42
 manufacturer: Acme
 model: SM652000-42-2022
 osversion: 1.0.22
@@ -64,7 +64,7 @@ software:
   - apps/itv-android
 disclosures:
   - destination: 
-    - name: acme-usage
+    - id: acme-usage
     - datatype: viewing stats, programmes
 ```
 
@@ -79,7 +79,7 @@ The `software` key represents apps installed either by the manufacturer or the u
 Each library, app, or service, in turn, can list its dependencies and has essential information about the jurisdictions and types of shared. It's shown in a separate file. For instnace, if we look at `appsflyer-android` under the `libs` directory:
 
 ```yaml
-name: appsflyer-android
+id: appsflyer-android
 type: lib
 libtype: [analytics, advertising]
 org: appsflyer.com
@@ -92,7 +92,7 @@ exodus_info: https://reports.exodus-privacy.eu.org/en/trackers/12/
 Notice the org tag here; this means that there should be another page containing information about the company.
 
 ```yaml
-name: appsflyer.com
+id: appsflyer.com
 type: company
 companyurl: https://www.appsflyer.com/
 nationality: US
@@ -113,8 +113,8 @@ In this example, there are articles that have been crowdsourced by individuals w
 Instead of creating a fixed specification, RETCONnect is designed to evolve, with the vocabulary itself defined in files that can be updated and versioned.  We take inspiration from XML namespaces to do this.
 
 ```yaml
-_vid: vocabs/retconnect-apps-v1 # this sets the vocabulary, can be a URL
-name: languagewizard.com
+_vid: vocabs/retconnect-apps-v1 # this sets the vocabulary, can be a URL to a vocabulary listed anywhere on the internet.
+id: languagewizard.com
 type: app
 ### .. rest of the file here 
 ```
@@ -122,14 +122,26 @@ type: app
 The specifications itself look like this:
 
 ```yaml
-name: retconnect-apps-v1
+id: retconnect-apps-v1
+type: vocab
 fields:
-  - name: 
+  - name: the name/title of the app
     - type: string
-    - description: The App 
-
+  - description: a human readable description of the app
+    - type: string
+  - platform: the platform of the app
+    - type: iOS | Android
+  - dependencies: the list of libraries used by the application
+    - type: [ library ]
 ```
 
-## Possible Applications
+## Envisioned Applications
 
-There 
+There are many possible applications that we have envisioned for RETCONnect. Here we describe a few that have been proposed, focused on those that could improve the security and privacy of individual citizens. 
+
+- *Buyer's Guide to home IoT*:  Many "smart home" and connected devices are available to purchase at discount prices on various e-Retail sites, however it is difficult to understand whether these devices are built secureily, including where they will send their data and who their core data processors are.  Having a buyer's guide that is informed by actual data about devices would empower consumers to make more informed purchases.
+
+- *Has My Data Been Leaked?*: Data breaches happen every day, and it is impractical for everyday citizens to try to keep track of what data breaches are relevant to them.  A repository of RETCONnects could enable a custom deamon to watch for published data breaches, and to match them against the dependencies of all  devices a person uses.  If a data controller used by a user's devices was experienced in a security vulnerability or data breach, then it is possible they were affected; this could be used to inform a mitigation strategy that is appropriate given the kind of data potentially compromised.
+
+- *Blocking without Breaking*: Increasingly, home broadband routers are becoming capable of providing privacy protections to users including by blocking certain services and sites at will.  With RETCONnect, these routers could provide more granular blocking controls to end users; do users want to block all services for instance, of a particular type, or with a particular reputation? Or perhaps only those with a geopolitical designation, such as blocking data controllers in regions with governments known for human rights violations or for which certain lifestyles are prohibited by law.
+
