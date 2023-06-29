@@ -139,9 +139,14 @@ fields:
 
 There are many possible applications that we have envisioned for RETCONnect. Here we describe a few that have been proposed, focused on those that could improve the security and privacy of individual citizens. 
 
-- *Buyer's Guide to home IoT*:  Many "smart home" and connected devices are available to purchase at discount prices on various e-Retail sites, however it is difficult to understand whether these devices are built secureily, including where they will send their data and who their core data processors are.  Having a buyer's guide that is informed by actual data about devices would empower consumers to make more informed purchases.
+- *Legible SBOMs for Guiding Buyers of Home IoT*:  Many "smart home" and connected devices are available to purchase at discount prices on various e-Retail sites, however it is difficult to understand whether these devices are built secureily, including where they will send their data and who their core data processors are.  Having a buyer's guide that is informed by actual data about devices would empower consumers to make more informed purchases.
 
 - *Has My Data Been Leaked?*: Data breaches happen every day, and it is impractical for everyday citizens to try to keep track of what data breaches are relevant to them.  A repository of RETCONnects could enable a custom deamon to watch for published data breaches, and to match them against the dependencies of all  devices a person uses.  If a data controller used by a user's devices was experienced in a security vulnerability or data breach, then it is possible they were affected; this could be used to inform a mitigation strategy that is appropriate given the kind of data potentially compromised.
 
 - *Blocking without Breaking*: Increasingly, home broadband routers are becoming capable of providing privacy protections to users including by blocking certain services and sites at will.  With RETCONnect, these routers could provide more granular blocking controls to end users; do users want to block all services for instance, of a particular type, or with a particular reputation? Or perhaps only those with a geopolitical designation, such as blocking data controllers in regions with governments known for human rights violations or for which certain lifestyles are prohibited by law.
 
+- *AI Red-Teaming Applications*: We envision that the next generation of proactive cyber-security applications will be able to perform various kinds of monitoring and testing to help bolster individual cybersecurity. One such application is [ARETHA-RT](https://github.com/OxfordHCC/arethart), which is a conceptual prototype of a future AI Red Teaming assistant.
+
+## License 
+
+RETCONnect is licensed under an MIT License–please adopt, remix, and use as you see fit; however we do not guarantee its suitability for use in your application.
