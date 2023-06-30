@@ -150,3 +150,7 @@ There are many possible applications that we have envisioned for RETCONnect. Her
 ## License 
 
 RETCONnect is licensed under an MIT License–please adopt, remix, and use as you see fit; however we do not guarantee its suitability for use in your application.
+
+## Acknowledgements
+
+RETCONnect was funded by the UKRI through the PETRAS2 Centre of Excellence, under the project RETCON: Red Teaming the Connected Internet of Things.
